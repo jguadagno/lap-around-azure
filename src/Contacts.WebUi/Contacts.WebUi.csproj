@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <UserSecretsId>825af8b1-1b68-464d-b5cb-42c8755f6686</UserSecretsId>
+        <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JosephGuadagno.AzureHelpers.Storage" Version="1.0.2" />
+        <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="3.1.6" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.1.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="Views\Contact\Index.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Contacts.Domain\Contacts.Domain.csproj" />
+    </ItemGroup>
+</Project>
